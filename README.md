@@ -1,5 +1,5 @@
 # PoolParty ☀️ 
-Minimal C# Unity object pooling tool for easy implementation.
+Minimal C# Unity object pooling tool for easy implementation on spawned GameObjects.
 
 ## How to Use
 1. Add the Pool Party GameObject Pool script to adjacent to a spawner component. Instead of instantiating objects from the spawner, use PoolParty.Get() to grab one from the pool. 
