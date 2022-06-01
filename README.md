@@ -6,4 +6,4 @@ Minimal C# Unity object pooling tool for easy implementation.
 
 2. Serialize your prefab to spawn in the inspector and configure the extra settings as preferred.
 
-3. Each object created will have a ReturnToPool component added for keeping its reference to its pool. When your object is ready to be destroyed, use ReturnToPool.Release() and it will return to the pool.
+3. Each object created will have a ReturnToPool component added for keeping its reference to its pool. When your object is ready to be destroyed, use ReturnToPool.Release().
