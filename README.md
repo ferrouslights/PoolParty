@@ -2,8 +2,8 @@
 Minimal C# Unity object pooling tool for easy implementation on spawned GameObjects.
 
 ## How to Use
-1. Add the Pool Party GameObject Pool script adjacent to a spawner component. Instead of instantiating objects from the spawner, use PoolParty.Get() to grab one from the pool. 
+1. Add a component inheriting PoolPartyReleaserBase (PoolParty is a simple implementation) to your spawner and serialize your prefab. Instead of instantiating objects from the spawner, use the components .Get() to grab one from the pool. 
 
-2. Serialize your prefab to spawn in the inspector and configure the extra settings as preferred.
+2. Each object created will have a PoolPartyReleaserBase component added for keeping its reference to its pool. When your object is ready to be destroyed, use its .Release() method. You can also subscribe to its OnAddComponent and OnRelease events for extra behavior.
 
-3. Each object created will have a ReturnToPool component added for keeping its reference to its pool. When your object is ready to be destroyed, use ReturnToPool.Release().
+Enjoy the pool! 🏊‍♀️ 
