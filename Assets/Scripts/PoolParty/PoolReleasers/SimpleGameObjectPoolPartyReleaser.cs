@@ -5,5 +5,5 @@ namespace ferrouslights.PoolParty
     /// <summary>
     /// Simple implementation of the releaser base
     /// </summary>
-    public class SimplePoolPartyReleaser : PoolPartyReleaserBase { }
+    public class SimpleGameObjectPoolPartyReleaser : PoolPartyReleaserBase<GameObject> { }
 }

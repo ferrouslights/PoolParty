@@ -13,7 +13,7 @@ public class CubeReleaser : MonoBehaviour
 
     private void ReleaseCube()
     {
-        if (gameObject.TryGetComponent<PoolPartyReleaserBase>(out PoolPartyReleaserBase releaser))
+        if (gameObject.TryGetComponent<SimpleGameObjectPoolPartyReleaser>(out SimpleGameObjectPoolPartyReleaser releaser))
         {
             releaser.Release();
         }

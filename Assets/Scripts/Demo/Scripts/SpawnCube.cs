@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using ferrouslights.PoolParty;
 using UnityEngine;
 
-[RequireComponent(typeof(SimpleGameObjectPoolPartyBase))]
+[RequireComponent(typeof(PoolPartyBase<>))]
 public class SpawnCube : MonoBehaviour
 {
-    private SimpleGameObjectPoolPartyBase _prefabPool;
+    private PoolPartyBase<> _prefabPool;
 
     private void Awake()
     {
-        _prefabPool = GetComponent<SimpleGameObjectPoolPartyBase>();
+        _prefabPool = GetComponent<PoolPartyBase<>>();
     }
 
     public void TriggerSpawnCube()
