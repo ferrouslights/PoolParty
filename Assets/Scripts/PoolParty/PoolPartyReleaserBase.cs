@@ -1,6 +1,8 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
+using Object = UnityEngine.Object;
 
 namespace ferrouslights.PoolParty
 {
@@ -18,6 +20,11 @@ namespace ferrouslights.PoolParty
         {
             Pool.Release(Object);
             OnRelease?.Invoke();
+        }
+
+        public virtual void AssignPooledObject(T pooledObject)
+        {
+            Object = pooledObject;
         }
 
         public virtual void TriggerAddedEvent()

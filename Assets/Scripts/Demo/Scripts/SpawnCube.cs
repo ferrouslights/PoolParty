@@ -7,11 +7,11 @@ using UnityEngine;
 [RequireComponent(typeof(PoolPartyBase<>))]
 public class SpawnCube : MonoBehaviour
 {
-    private PoolPartyBase<> _prefabPool;
+    private PoolPartyBase<GameObject> _prefabPool;
 
     private void Awake()
     {
-        _prefabPool = GetComponent<PoolPartyBase<>>();
+        _prefabPool = GetComponent<PoolPartyBase<GameObject>>();
     }
 
     public void TriggerSpawnCube()

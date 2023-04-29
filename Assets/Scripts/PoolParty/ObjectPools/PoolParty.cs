@@ -13,6 +13,7 @@ namespace ferrouslights.PoolParty
         {
             var newPooledObject = Instantiate(ObjectToPool);
             var returnToPool = newPooledObject.AddComponent<SimpleGameObjectPoolPartyReleaser>();
+            returnToPool.AssignPooledObject(newPooledObject);
             returnToPool.Pool = Pool;
             returnToPool.TriggerAddedEvent();
 
